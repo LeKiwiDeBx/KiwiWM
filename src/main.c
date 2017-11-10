@@ -14,7 +14,7 @@ int main(int argc, char **argv) {
 	int screen;
 	Window root;
 	Display *dpy;
-	Xevent ev;
+	XEvent ev;
 	/*
 	 int screen ;
 	 Window root ;
@@ -36,7 +36,7 @@ int main(int argc, char **argv) {
 	 }
 	 */
 
-	if (!(dpy = XOpenDisplay(0)))
+	if (!(dpy = XOpenDisplay(NULL)))
 		printf("KiwiWM: cannot open display\n");
 	screen = DefaultScreen(dpy);
 	root = RootWindow(dpy, screen);
